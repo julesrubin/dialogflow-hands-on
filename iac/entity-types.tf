@@ -122,6 +122,6 @@ resource "google_dialogflow_cx_entity_type" "order_number" {
   entities {
     # Order number format: ABCD123
     value    = "[A-Z]{4}[0-9]{3}"
-    synonyms = [""]
+    synonyms = ["[A-Z]{4}[0-9]{3}"]
   }
 }
