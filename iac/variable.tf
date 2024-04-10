@@ -19,5 +19,5 @@ variable "time_zone" {
 variable "default_language_code" {
   description = "Default language code"
   type        = string
-  default     = "fr"
+  default     = "en"
 }
