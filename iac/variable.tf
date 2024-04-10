@@ -15,3 +15,9 @@ variable "time_zone" {
   type        = string
   default     = "Europe/Madrid"
 }
+
+variable "default_language_code" {
+  description = "Default language code"
+  type        = string
+  default     = "fr"
+}
