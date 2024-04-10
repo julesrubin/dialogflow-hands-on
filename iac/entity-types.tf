@@ -15,7 +15,8 @@ resource "google_dialogflow_cx_entity_type" "artist" {
     synonyms = ["Gs and Roses"]
   }
   entities {
-    value = "Alice Googler"
+    value    = "Alice Googler"
+    synonyms = ["Alice"]
   }
 
   enable_fuzzy_extraction = true
@@ -43,11 +44,13 @@ resource "google_dialogflow_cx_entity_type" "merch" {
 
 
   entities {
-    value = "Digital Album"
+    value    = "Digital Album"
+    synonyms = ["Digital Music", "Digital Songs"]
   }
 
   entities {
-    value = "Tour Movie"
+    value    = "Tour Movie"
+    synonyms = ["Concert Movie"]
   }
 
   enable_fuzzy_extraction = true
@@ -59,10 +62,12 @@ resource "google_dialogflow_cx_entity_type" "album" {
   kind         = "KIND_MAP"
 
   entities {
-    value = "Greatest Hits"
+    value    = "Greatest Hits"
+    synonyms = ["Best Of", "Greatest Songs"]
   }
   entities {
-    value = "Live"
+    value    = "Live"
+    synonyms = ["Live Album", "Concert Album"]
   }
 
 }
