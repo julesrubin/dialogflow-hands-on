@@ -7,17 +7,11 @@ variable "project_id" {
 variable "location" {
   description = "GCP location"
   type        = string
-  default     = "EU"
+  default     = "us-central1"
 }
 
-variable "pubsub_topic_id" {
-  description = "GCP location"
+variable "time_zone" {
+  description = "Time zone"
   type        = string
-  default     = "valid_file"
-}
-
-variable "region" {
-  description = "GCP region"
-  type        = string
-  default     = "europe-west1"
+  default     = "Europe/Madrid"
 }
