@@ -120,6 +120,8 @@ resource "google_dialogflow_cx_entity_type" "order_number" {
   display_name = "OrderNumber"
   kind         = "KIND_REGEXP"
   entities {
-    value = "\\w{4}\\d{3}"
+    # Order number format: ABCD123
+    value    = "[A-Z]{4}[0-9]{3}"
+    synonyms = ["[a-z]{4}[0-9]{3}"]
   }
 }
