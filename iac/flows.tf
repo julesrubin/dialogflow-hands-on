@@ -84,11 +84,10 @@ resource "google_dialogflow_cx_flow" "default" {
     intent      = google_dialogflow_cx_intent.redirect_my_order_status.id
     target_flow = google_dialogflow_cx_flow.my_order.id
   }
-  # transition_routes {
-  #   name        = "end"
-  #   intent      = google_dialogflow_cx_intent.redirect_end
-  #   target_page = google_dialogflow_cx_page.
-  # }
+  transition_routes {
+    intent      = google_dialogflow.intents.redirect_end.id
+    target_page = "${google_dialogflow_cx_agent.agent.start_flow}/pages/END_SESSION"
+  }
 }
 
 resource "google_dialogflow_cx_flow" "catalog" {
