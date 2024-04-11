@@ -1073,6 +1073,13 @@ resource "google_dialogflow_cx_intent" "redirect_order_process" {
     redact      = false
   }
 
+  parameters {
+    entity_type = google_dialogflow_cx_entity_type.size.id
+    id          = "size"
+    is_list     = false
+    redact      = false
+  }
+
   training_phrases {
     repeat_count = 1
     parts {
