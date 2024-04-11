@@ -1,3 +1,89 @@
+resource "google_dialogflow_cx_intent" "redirect_artists_overview" {
+  parent       = google_dialogflow_cx_agent.agent.id
+  display_name = "redirect.artists.overview"
+  description  = " Artists overview: The bands supported by the label"
+
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "Which bands are signed?"
+    }
+  }
+
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "Which bands"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "Which artists"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "Which artists are part of the record label"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "Who is part of the label"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "From which bands can I buy merchandise"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "Band merchandise"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "Which music do you have?"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "I would like to know who are signed to the label"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "Who are supported by the label"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "From who can I buy shirts"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "What music can I order"
+    }
+  }
+
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "Can I get an overview of all the artists"
+    }
+  }
+}
 resource "google_dialogflow_cx_intent" "redirect_product_overview" {
   parent       = google_dialogflow_cx_agent.agent.id
   display_name = "redirect.product.overview"
