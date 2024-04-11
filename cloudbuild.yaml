@@ -16,7 +16,7 @@ steps:
 
 # [START tf-init]
 - id: 'Layer Data Ingestion - terraform init'
-  name: 'hashicorp/terraform:1.2.1'
+  name: 'hashicorp/terraform:1.8.0'
   entrypoint: 'sh'
   args:
   - '-c'
@@ -27,7 +27,7 @@ steps:
 
 # [START tf-plan]
 - id: 'Terraform plan'
-  name: 'hashicorp/terraform:1.2.1'
+  name: 'hashicorp/terraform:1.8.0'
   entrypoint: 'sh'
   args:
   - '-c'
