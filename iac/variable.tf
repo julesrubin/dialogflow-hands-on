@@ -21,8 +21,8 @@ variable "default_language_code" {
   type        = string
   default     = "en"
 }
-variable "default_start_page" {
-  description = "Default start page"
+variable "default_welcome_intent" {
+  description = "Default welcome intent"
   type        = string
   default     = "00000000-0000-0000-0000-000000000000"
 }

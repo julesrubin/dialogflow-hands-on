@@ -26,7 +26,7 @@ resource "google_dialogflow_cx_flow" "default_flow" {
     }
   }
   transition_routes {
-    intent = "${google_dialogflow_cx_agent.agent.id}/intents/${var.default_start_page}"
+    intent = "${google_dialogflow_cx_agent.agent.id}/intents/${var.default_welcome_intent}"
     trigger_fulfillment {
       messages {
         text {
