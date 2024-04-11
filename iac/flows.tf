@@ -26,62 +26,50 @@ resource "google_dialogflow_cx_flow" "default" {
     }
   }
   transition_routes {
-    name        = "artist_overview"
     intent      = google_dialogflow_cx_intent.redirect_artists_overview.id
     target_flow = google_dialogflow_cx_flow.catalog.id
   }
   transition_routes {
-    name        = "product_overview"
     intent      = google_dialogflow_cx_intent.redirect_product_overview.id
     target_flow = google_dialogflow_cx_flow.catalog.id
   }
   transition_routes {
-    name        = "shirts"
     intent      = google_dialogflow_cx_intent.redirect_shirts.id
     target_flow = google_dialogflow_cx_flow.catalog.id
   }
   transition_routes {
-    name        = "music"
     intent      = google_dialogflow_cx_intent.redirect_music.id
     target_flow = google_dialogflow_cx_flow.catalog.id
   }
   transition_routes {
-    name        = "products"
     intent      = google_dialogflow_cx_intent.redirect_product.id
     target_flow = google_dialogflow_cx_flow.catalog.id
   }
   transition_routes {
-    name        = "product_of_artist"
     intent      = google_dialogflow_cx_intent.redirect_product_of_artist.id
     target_flow = google_dialogflow_cx_flow.catalog.id
   }
   transition_routes {
-    name        = "refund_info"
     intent      = google_dialogflow_cx_intent.redirect_refund_info.id
     target_flow = google_dialogflow_cx_flow.customer_care.id
   }
   transition_routes {
-    name        = "shipping_info"
     intent      = google_dialogflow_cx_intent.redirect_shipping_info.id
     target_flow = google_dialogflow_cx_flow.customer_care.id
   }
   transition_routes {
-    name        = "swapping_info"
     intent      = google_dialogflow_cx_intent.redirect_swapping_info.id
     target_flow = google_dialogflow_cx_flow.customer_care.id
   }
   transition_routes {
-    name        = "my_order"
     intent      = google_dialogflow_cx_intent.redirect_my_order.id
     target_flow = google_dialogflow_cx_flow.my_order.id
   }
   transition_routes {
-    name        = "my_order_canceled"
     intent      = google_dialogflow_cx_intent.redirect_my_order_canceled.id
     target_flow = google_dialogflow_cx_flow.my_order.id
   }
   transition_routes {
-    name        = "my_order_status"
     intent      = google_dialogflow_cx_intent.redirect_my_order_status.id
     target_flow = google_dialogflow_cx_flow.my_order.id
   }
