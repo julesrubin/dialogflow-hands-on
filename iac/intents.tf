@@ -843,13 +843,16 @@ resource "google_dialogflow_cx_intent" "redirect_my_order" {
     parts {
       text = "About my order"
     }
+    repeat_count = 1
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I have a question about my order"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "My order is ABCD123, I have a question about my order."
     }
