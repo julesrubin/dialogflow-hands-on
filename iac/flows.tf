@@ -85,7 +85,7 @@ resource "google_dialogflow_cx_flow" "default" {
     target_flow = google_dialogflow_cx_flow.my_order.id
   }
   transition_routes {
-    intent      = google_dialogflow.intents.redirect_end.id
+    intent      = google_dialogflow_cx_intent.redirect_end.id
     target_page = "${google_dialogflow_cx_agent.agent.id}/pages/END_SESSION}"
   }
 }
