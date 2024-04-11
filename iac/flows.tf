@@ -32,7 +32,7 @@ resource "google_dialogflow_cx_flow" "default" {
   }
   transition_routes {
     name        = "product_overview"
-    intent      = google_dialogflow_cx_intent.redirect_product_overview
+    intent      = google_dialogflow_cx_intent.redirect_product_overview.id
     target_flow = google_dialogflow_cx_flow.catalog.id
   }
   transition_routes {
