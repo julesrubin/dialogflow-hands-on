@@ -1,5 +1,32 @@
 resource "google_dialogflow_cx_flow" "catalog" {
   parent       = google_dialogflow_cx_agent.agent.id
+  display_name = "Default Start Flow"
+  description  = "A start flow created along with the agent. My own description."
+  event_handlers {
+    event = "sys.no-match-default"
+    trigger_fulfillment {
+      return_partial_responses = false
+      messages {
+        text {
+          text = ["Sorry, could you say that again?"]
+        }
+      }
+    }
+  }
+  event_handlers {
+    event = "sys.no-input-default"
+    trigger_fulfillment {
+      return_partial_responses = false
+      messages {
+        text {
+          text = ["One more time?"]
+        }
+      }
+    }
+  }
+}
+resource "google_dialogflow_cx_flow" "catalog" {
+  parent       = google_dialogflow_cx_agent.agent.id
   display_name = "Catalog"
   description  = "Catalog flow"
   event_handlers {
