@@ -25,7 +25,73 @@ resource "google_dialogflow_cx_flow" "default" {
       }
     }
   }
+  transition_routes {
+    name        = "artist_overview"
+    intent      = google_dialogflow_cx_intent.redirect_artists_overview.id
+    target_flow = google_dialogflow_cx_flow.catalog.id
+  }
+  transition_routes {
+    name        = "product_overview"
+    intent      = google_dialogflow_cx_intent.redirect_product_overview
+    target_flow = google_dialogflow_cx_flow.catalog.id
+  }
+  transition_routes {
+    name        = "shirts"
+    intent      = google_dialogflow_cx_intent.redirect_shirts
+    target_flow = google_dialogflow_cx_flow.catalog.id
+  }
+  transition_routes {
+    name        = "music"
+    intent      = google_dialogflow_cx_intent.redirect_music
+    target_flow = google_dialogflow_cx_flow.catalog.id
+  }
+  transition_routes {
+    name        = "products"
+    intent      = google_dialogflow_cx_intent.redirect_product
+    target_flow = google_dialogflow_cx_flow.catalog.id
+  }
+  transition_routes {
+    name        = "product_of_artist"
+    intent      = google_dialogflow_cx_intent.redirect_product_of_artist
+    target_flow = google_dialogflow_cx_flow.catalog.id
+  }
+  transition_routes {
+    name        = "refund_info"
+    intent      = google_dialogflow_cx_intent.redirect_refund_info
+    target_flow = google_dialogflow_cx_flow.customer_care.id
+  }
+  transition_routes {
+    name        = "shipping_info"
+    intent      = google_dialogflow_cx_intent.redirect_shipping_info
+    target_flow = google_dialogflow_cx_flow.customer_care.id
+  }
+  transition_routes {
+    name        = "swapping_info"
+    intent      = google_dialogflow_cx_intent.redirect_swapping_info
+    target_flow = google_dialogflow_cx_flow.customer_care.id
+  }
+  transition_routes {
+    name        = "my_order"
+    intent      = google_dialogflow_cx_intent.redirect_my_order
+    target_flow = google_dialogflow_cx_flow.my_order.id
+  }
+  transition_routes {
+    name        = "my_order_canceled"
+    intent      = google_dialogflow_cx_intent.redirect_my_order_canceled
+    target_flow = google_dialogflow_cx_flow.my_order.id
+  }
+  transition_routes {
+    name        = "my_order_status"
+    intent      = google_dialogflow_cx_intent.redirect_my_order_status
+    target_flow = google_dialogflow_cx_flow.my_order.id
+  }
+  transition_routes {
+    name        = "end"
+    intent      = google_dialogflow_cx_intent.redirect_end
+    target_page = google_dialogflow_cx_page.end.id
+  }
 }
+
 resource "google_dialogflow_cx_flow" "catalog" {
   parent       = google_dialogflow_cx_agent.agent.id
   display_name = "Catalog"
