@@ -1,4 +1,4 @@
-resource "google_dialogflow_cx_flow" "default" {
+resource "google_dialogflow_cx_flow" "default_flow" {
   parent                = google_dialogflow_cx_agent.agent.id
   display_name          = "My Default Start Flow"
   description           = "A start flow created along with the agent. My own description."
@@ -86,7 +86,7 @@ resource "google_dialogflow_cx_flow" "default" {
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_end.id
-    target_page = "${google_dialogflow_cx_agent.agent.id}/pages/END_SESSION}"
+    target_page = "${google_dialogflow_cx_agent.default_flow.id}/pages/END_SESSION}"
   }
 }
 
