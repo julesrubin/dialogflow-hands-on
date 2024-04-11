@@ -151,7 +151,7 @@ resource "google_dialogflow_cx_flow" "catalog" {
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_home.id
-    target_page = "${google_dialogflow_cx_agent.agent.catalog}/pages/STOP_FLOW"
+    target_page = "${google_dialogflow_cx_agent.agent.catalog}/pages/END_FLOW"
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_end.id
