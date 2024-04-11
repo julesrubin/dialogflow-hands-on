@@ -1,7 +1,8 @@
 resource "google_dialogflow_cx_flow" "default" {
-  parent       = google_dialogflow_cx_agent.agent.id
-  display_name = "Default Start Flow"
-  description  = "A start flow created along with the agent. My own description."
+  parent                = google_dialogflow_cx_agent.agent.id
+  display_name          = "My Default Start Flow"
+  description           = "A start flow created along with the agent. My own description."
+  is_default_start_flow = true
   event_handlers {
     event = "sys.no-match-default"
     trigger_fulfillment {
