@@ -4,68 +4,81 @@ resource "google_dialogflow_cx_intent" "redirect_artists_overview" {
   description  = " Artists overview: The bands supported by the label"
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Which bands are signed?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Which bands"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Which artists"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Which artists are part of the record label"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Who is part of the label"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "From which bands can I buy merchandise"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Band merchandise"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Which music do you have?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I would like to know who are signed to the label"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Who are supported by the label"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "From who can I buy shirts"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What music can I order"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Can I get an overview of all the artists"
     }
@@ -78,51 +91,61 @@ resource "google_dialogflow_cx_intent" "redirect_product_overview" {
   description  = "Product overview: The merchandise items available"
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Which products do you sell?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What merchandise items do you have?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What are you selling?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What are the items?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Which products?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What merchandise?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Please tell me what you have"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What items can I purchase?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Can you show me your merchandise?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want to know about your products"
     }
@@ -141,18 +164,21 @@ resource "google_dialogflow_cx_intent" "confirm_artists_overview" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Yeah, let me buy merchandise"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Yes, I want to purchase something"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Yes, I would like to order merchandise from "
     }
@@ -164,42 +190,49 @@ resource "google_dialogflow_cx_intent" "confirm_artists_overview" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Ok, let's buy stuff."
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Confirming merchandise purchase"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Yes, I'm interested in buying merchandise"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Alright, let's proceed with the merchandise purchase"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Sure, I'm ready to buy merchandise"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Confirming merchandise order"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Yes, I'm ready to purchase merchandise"
     }
@@ -212,60 +245,70 @@ resource "google_dialogflow_cx_intent" "redirect_price" {
   description  = "Redirecting user inquiries about prices"
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "How much does a t-shirt cost?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What's the price for the tour movie?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "The album is how much?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want to know the price of a longsleeve shirt"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What's the price difference?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What does each product cost?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What does it cost?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What is the price?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "How much for the merchandise?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Could you tell me the price?"
     }
@@ -285,12 +328,14 @@ resource "google_dialogflow_cx_intent" "redirect_product_of_artist" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Yeah, let's shop"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Give me merch of "
     }
@@ -302,6 +347,7 @@ resource "google_dialogflow_cx_intent" "redirect_product_of_artist" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Shirts of "
     }
@@ -317,12 +363,14 @@ resource "google_dialogflow_cx_intent" "redirect_product_of_artist" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Yes"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want "
     }
@@ -338,12 +386,14 @@ resource "google_dialogflow_cx_intent" "redirect_product_of_artist" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Yes, I want to order merchandise"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Yep, give me items of "
     }
@@ -355,12 +405,14 @@ resource "google_dialogflow_cx_intent" "redirect_product_of_artist" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Go for it"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Anything "
     }
@@ -372,6 +424,7 @@ resource "google_dialogflow_cx_intent" "redirect_product_of_artist" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I am a "
     }
@@ -400,30 +453,35 @@ resource "google_dialogflow_cx_intent" "redirect_shirts" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Shirts"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want to buy shirts"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I am interested in shirts"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want a shirt"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Shirts of "
     }
@@ -439,6 +497,7 @@ resource "google_dialogflow_cx_intent" "redirect_shirts" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Give me shirts of "
     }
@@ -450,6 +509,7 @@ resource "google_dialogflow_cx_intent" "redirect_shirts" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want to buy shirts of "
     }
@@ -474,24 +534,28 @@ resource "google_dialogflow_cx_intent" "redirect_music" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Music"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want to buy music"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I am interested in music"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Give me music of "
     }
@@ -503,6 +567,7 @@ resource "google_dialogflow_cx_intent" "redirect_music" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Music of "
     }
@@ -518,6 +583,7 @@ resource "google_dialogflow_cx_intent" "redirect_music" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Interested in buying the "
     }
@@ -533,6 +599,7 @@ resource "google_dialogflow_cx_intent" "redirect_music" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Purchase "
     }
@@ -554,30 +621,35 @@ resource "google_dialogflow_cx_intent" "redirect_album" {
   description  = "Redirect to albums"
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Hits"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Live Album"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want the Greatest Hits Digital Album"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Give me the Greatest Hits CD"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Hits on MP3"
     }
@@ -597,24 +669,28 @@ resource "google_dialogflow_cx_intent" "redirect_shirt_size" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What size do you have?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What sizes are available?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What size do you offer?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       parameter_id = "size"
       text         = "XS"
@@ -625,6 +701,7 @@ resource "google_dialogflow_cx_intent" "redirect_shirt_size" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Give me the "
     }
@@ -639,6 +716,7 @@ resource "google_dialogflow_cx_intent" "redirect_shirt_size" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want the "
     }
@@ -653,6 +731,7 @@ resource "google_dialogflow_cx_intent" "redirect_shirt_size" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I need the "
     }
@@ -667,6 +746,7 @@ resource "google_dialogflow_cx_intent" "redirect_shirt_size" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "My size is "
     }
@@ -677,6 +757,7 @@ resource "google_dialogflow_cx_intent" "redirect_shirt_size" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I wear "
     }
@@ -691,6 +772,7 @@ resource "google_dialogflow_cx_intent" "redirect_shirt_size" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       parameter_id = "size"
       text         = "Extra Large"
@@ -713,24 +795,28 @@ resource "google_dialogflow_cx_intent" "redirect_order_status" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What's the status of my order?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Can you tell me the status of my order?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want to know the status of my order"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What's the status of order number "
     }
@@ -742,6 +828,7 @@ resource "google_dialogflow_cx_intent" "redirect_order_status" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "My order is "
     }
@@ -758,6 +845,7 @@ resource "google_dialogflow_cx_intent" "redirect_order_status" {
 
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I need to know the status of order number "
     }
@@ -769,6 +857,7 @@ resource "google_dialogflow_cx_intent" "redirect_order_status" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "When I will receive my order "
     }
@@ -786,21 +875,25 @@ resource "google_dialogflow_cx_intent" "redirect_order_canceled" {
     redact      = false
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Has my order been canceled?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Can you check if my order has been canceled?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want to know if my order has been canceled"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Has order number "
     }
@@ -813,6 +906,7 @@ resource "google_dialogflow_cx_intent" "redirect_order_canceled" {
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "My order "
     }
@@ -825,6 +919,7 @@ resource "google_dialogflow_cx_intent" "redirect_order_canceled" {
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I need to check if order number "
     }
@@ -837,6 +932,7 @@ resource "google_dialogflow_cx_intent" "redirect_order_canceled" {
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "When will I receive my refund for order "
     }
@@ -853,39 +949,46 @@ resource "google_dialogflow_cx_intent" "redirect_shipping_info" {
   description  = "Redirect to shipping information"
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "How long will it take?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "How long is shipping?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "How long does shipping take?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "When will I receive it?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "When will I get my order?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "When will I receive my order?"
     }
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "When will I get my merchandise?"
     }
@@ -897,21 +1000,25 @@ resource "google_dialogflow_cx_intent" "redirect_refund_info" {
   display_name = "redirect.refund.info"
   description  = "Redirect to refund information"
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want a refund."
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Can I get a refund?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want to return the CD."
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want to return my t-shirt."
     }
@@ -923,21 +1030,25 @@ resource "google_dialogflow_cx_intent" "redirect_swapping_info" {
   display_name = "redirect.swapping.info"
   description  = "Redirect to swapping information"
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want to swap my item"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Can I change my t-shirt for a larger size?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Can I change my product?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want to swap the CD"
     }
@@ -963,6 +1074,7 @@ resource "google_dialogflow_cx_intent" "redirect_order_process" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want to buy a "
     }
@@ -992,6 +1104,7 @@ resource "google_dialogflow_cx_intent" "redirect_order_process" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Let me buy the "
     }
@@ -1012,6 +1125,7 @@ resource "google_dialogflow_cx_intent" "redirect_order_process" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Get me the "
     }
@@ -1032,6 +1146,7 @@ resource "google_dialogflow_cx_intent" "redirect_order_process" {
   }
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Purchase the "
     }
@@ -1054,66 +1169,79 @@ resource "google_dialogflow_cx_intent" "confirm_proceed_order" {
   description  = "Confirmation to proceed with an order"
 
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Yes"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Yes, please continue"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Yes order"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I want to order"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Yeah"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Yep"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I confirm"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Agree"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Go ahead"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Order"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Buy it"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Purchase"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Okay"
     }
@@ -1125,56 +1253,67 @@ resource "google_dialogflow_cx_intent" "decline_proceed_order" {
   display_name = "decline.proceed.order"
   description  = "Decline to proceed with an order"
   training_phrases {
+    repeat_count = 1
     parts {
       text = "No"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I rather not"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I don't want it anymore"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Don't order"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Stop"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Not anymore"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Nope"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Go back"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Reset"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Decline"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I don't need it"
     }
@@ -1186,61 +1325,73 @@ resource "google_dialogflow_cx_intent" "redirect_home" {
   display_name = "redirect.home"
   description  = "Redirect to the home intent"
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Go back"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Home"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Help"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What else can I ask"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Restart"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Can you tell me what I can order?"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "What questions can I ask"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "I need help"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Advice please"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Hi"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Hello"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Good day!"
     }
@@ -1252,51 +1403,61 @@ resource "google_dialogflow_cx_intent" "redirect_end" {
   display_name = "redirect.end"
   description  = "Redirect to the end intent"
   training_phrases {
+    repeat_count = 1
     parts {
       text = "No that's it, goodbye"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Bye"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Cheers"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "End"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "That's it"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "No more questions"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Exit"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Have a good day"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "End Call"
     }
   }
   training_phrases {
+    repeat_count = 1
     parts {
       text = "Close"
     }
