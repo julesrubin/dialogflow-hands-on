@@ -1,90 +1,3 @@
-resource "google_dialogflow_cx_intent" "redirect_artists_overview" {
-  parent       = google_dialogflow_cx_agent.agent.id
-  display_name = "redirect.artists.overview"
-  description  = " Artists overview: The bands supported by the label"
-
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "Which bands are signed?"
-    }
-  }
-
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "Which bands"
-    }
-  }
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "Which artists"
-    }
-  }
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "Which artists are part of the record label"
-    }
-  }
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "Who is part of the label"
-    }
-  }
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "From which bands can I buy merchandise"
-    }
-  }
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "Band merchandise"
-    }
-  }
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "Which music do you have?"
-    }
-  }
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "I would like to know who are signed to the label"
-    }
-  }
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "Who are supported by the label"
-    }
-  }
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "From who can I buy shirts"
-    }
-  }
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "What music can I order"
-    }
-  }
-
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "Can I get an overview of all the artists"
-    }
-  }
-}
-
 resource "google_dialogflow_cx_intent" "redirect_product_overview" {
   parent       = google_dialogflow_cx_agent.agent.id
   display_name = "redirect.product.overview"
@@ -311,6 +224,60 @@ resource "google_dialogflow_cx_intent" "redirect_price" {
     repeat_count = 1
     parts {
       text = "Could you tell me the price?"
+    }
+  }
+}
+
+resource "google_dialogflow_cx_intent" "redirect_product" {
+  parent       = google_dialogflow_cx_agent.agent.id
+  display_name = "redirect.product"
+  description  = "Redirect to product intent"
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "Tour movie"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "I am interested in a t-shirt"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "Can I buy a digital album?"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "I want the CD"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "I want to buy something"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "Can I purchase a record?"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "I want to buy a t-shirt size M of The Google Dolls"
+    }
+  }
+  training_phrases {
+    repeat_count = 1
+    parts {
+      text = "Can I purchase the Alice Googler digital album?"
     }
   }
 }
@@ -782,8 +749,28 @@ resource "google_dialogflow_cx_intent" "redirect_shirt_size" {
     }
   }
 }
+resource "google_dialogflow_cx_intent" "redirect_my_order" {
+  parent       = google_dialogflow_cx_agent.agent.id
+  display_name = "redirect.my.order"
+  description  = "Redirect to inquire about an order"
+  training_phrases {
+    parts {
+      text = "About my order"
+    }
+  }
+  training_phrases {
+    parts {
+      text = "I have a question about my order"
+    }
+  }
+  training_phrases {
+    parts {
+      text = "My order is ABCD123, I have a question about my order."
+    }
+  }
+}
 
-resource "google_dialogflow_cx_intent" "redirect_order_status" {
+resource "google_dialogflow_cx_intent" "redirect_my_order_status" {
   parent       = google_dialogflow_cx_agent.agent.id
   display_name = "redirect.my.order.status"
   description  = "Redirect to check the status of an order"
@@ -864,7 +851,7 @@ resource "google_dialogflow_cx_intent" "redirect_order_status" {
   }
 }
 
-resource "google_dialogflow_cx_intent" "redirect_order_canceled" {
+resource "google_dialogflow_cx_intent" "redirect_my_order_canceled" {
   parent       = google_dialogflow_cx_agent.agent.id
   display_name = "redirect.my.order.canceled"
   description  = "Redirect to check the cancellation status of an order"
