@@ -1,4 +1,4 @@
-resource "google_dialogflow_cx_flow" "catalog" {
+resource "google_dialogflow_cx_flow" "default" {
   parent       = google_dialogflow_cx_agent.agent.id
   display_name = "Default Start Flow"
   description  = "A start flow created along with the agent. My own description."
