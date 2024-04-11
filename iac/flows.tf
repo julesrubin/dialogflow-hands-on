@@ -30,7 +30,7 @@ resource "google_dialogflow_cx_flow" "default" {
     trigger_fulfillment {
       messages {
         text {
-          text = ["Welcome to the default flow"]
+          text = ["Welcome, I am the virtual agent of G-Records, a fictional rock label. You can order artists merchandise, ask questions about your order or shipping, and I can tell you more which artists are currently signed with us. How can I help?"]
         }
       }
 
