@@ -129,26 +129,10 @@ resource "google_dialogflow_cx_flow" "catalog_flow" {
     }
   }
 
-  # transition_routes {
-  #   intent      = google_dialogflow_cx_intent.redirect_artists_overview.id
-  #   target_page = google_dialofflow_cx.agent.catalog_flow.pages.page_artist_overview.id
-  # }
-  # transition_routes {
-  #   intent      = google_dialogflow_cx_intent.redirect_product.id
-  #   target_page = google_dialofflow_cx.agent.catalog_flow.pages.page_product.id
-  # }
-  # transition_routes {
-  #   intent      = google_dialogflow_cx_intent.redirect_product_overview.id
-  #   target_page = google_dialofflow_cx.agent.catalog_flow.pages.page_product_overview.id
-  # }
-  # transition_routes {
-  #   intent      = google_dialogflow_cx_intent.redirect_music.id
-  #   target_page = google_dialofflow_cx.agent.catalog_flow.pages.page_music.id
-  # }
-  # transition_routes {
-  #   intent      = google_dialogflow_cx_intent.redirect_music.id
-  #   target_page = google_dialofflow_cx.agent.catalog_flow.pages.page_music.id
-  # }
+  transition_routes {
+    intent      = google_dialogflow_cx_intent.redirect_artists_overview.id
+    target_page = google_dialogflow_cx_page.page_artist_overview.id
+  }
 }
 
 resource "google_dialogflow_cx_flow" "customer_care" {
