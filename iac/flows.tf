@@ -131,23 +131,23 @@ resource "google_dialogflow_cx_flow" "catalog" {
 
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_artists_overview.id
-    target_page = google_dialogflow_cx_page.page_artist_overview
+    target_page = google_dialogflow_cx_page.page_artist_overview.id
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_product.id
-    target_page = google_dialogflow_cx_page.page_product
+    target_page = google_dialogflow_cx_page.page_product.id
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_product_overview.id
-    target_page = google_dialogflow_cx_page.page_product_overview
+    target_page = google_dialogflow_cx_page.page_product_overview.id
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_music.id
-    target_page = google_dialogflow_cx_page.page_music
+    target_page = google_dialogflow_cx_page.page_music.id
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_music.id
-    target_page = google_dialogflow_cx_page.page_music
+    target_page = google_dialogflow_cx_page.page_music.id
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_home.id
