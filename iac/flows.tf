@@ -128,6 +128,10 @@ resource "google_dialogflow_cx_flow" "catalog_flow" {
       }
     }
   }
+  transition_routes {
+    intent      = google_dialogflow_cx_intent.redirect_product_overview.id
+    target_page = google_dialogflow_cx_page.page_product_overview.id
+  }
 }
 
 resource "google_dialogflow_cx_flow" "customer_care" {
