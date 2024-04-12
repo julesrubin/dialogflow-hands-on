@@ -5,7 +5,7 @@ import {
 }
 
 # make modifications to the start page of the catalog flow
-resource "google_dialogflow_cx_page" "catalog_flow_start" {
+resource "google_dialogflow_cx_page" "catalog_flow_start_page" {
   parent       = google_dialogflow_cx_flow.catalog_flow.id
   display_name = "Start Page"
 }
