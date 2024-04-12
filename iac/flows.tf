@@ -38,27 +38,27 @@ resource "google_dialogflow_cx_flow" "start_flow" {
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_artists_overview.id
-    target_flow = google_dialogflow_cx_flow.catalog.id
+    target_flow = google_dialogflow_cx_flow.catalog_flow.id
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_product_overview.id
-    target_flow = google_dialogflow_cx_flow.catalog.id
+    target_flow = google_dialogflow_cx_flow.catalog_flow.id
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_shirts.id
-    target_flow = google_dialogflow_cx_flow.catalog.id
+    target_flow = google_dialogflow_cx_flow.catalog_flow.id
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_music.id
-    target_flow = google_dialogflow_cx_flow.catalog.id
+    target_flow = google_dialogflow_cx_flow.catalog_flow.id
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_product.id
-    target_flow = google_dialogflow_cx_flow.catalog.id
+    target_flow = google_dialogflow_cx_flow.catalog_flow.id
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_product_of_artist.id
-    target_flow = google_dialogflow_cx_flow.catalog.id
+    target_flow = google_dialogflow_cx_flow.catalog_flow.id
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_refund_info.id
@@ -90,7 +90,7 @@ resource "google_dialogflow_cx_flow" "start_flow" {
   }
 }
 
-resource "google_dialogflow_cx_flow" "catalog" {
+resource "google_dialogflow_cx_flow" "catalog_flow" {
   parent       = google_dialogflow_cx_agent.agent.id
   display_name = "Catalog"
   description  = "Catalog flow"
@@ -131,31 +131,23 @@ resource "google_dialogflow_cx_flow" "catalog" {
 
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_artists_overview.id
-    target_page = google_dialogflow_cx_page.page_artist_overview.id
+    target_page = google_dialofflow_cx.agent.catalog_flow.pages.page_artist_overview.id
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_product.id
-    target_page = google_dialogflow_cx_page.page_product.id
+    target_page = google_dialofflow_cx.agent.catalog_flow.pages.page_product.id
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_product_overview.id
-    target_page = google_dialogflow_cx_page.page_product_overview.id
+    target_page = google_dialofflow_cx.agent.catalog_flow.pages.page_product_overview.id
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_music.id
-    target_page = google_dialogflow_cx_page.page_music.id
+    target_page = google_dialofflow_cx.agent.catalog_flow.pages.page_music.id
   }
   transition_routes {
     intent      = google_dialogflow_cx_intent.redirect_music.id
-    target_page = google_dialogflow_cx_page.page_music.id
-  }
-  transition_routes {
-    intent      = google_dialogflow_cx_intent.redirect_home.id
-    target_page = "${google_dialogflow_cx_agent.agent.catalog}/pages/END_FLOW"
-  }
-  transition_routes {
-    intent      = google_dialogflow_cx_intent.redirect_end.id
-    target_page = "${google_dialogflow_cx_agent.agent.catalog}/pages/END_SESSION"
+    target_page = google_dialofflow_cx.agent.catalog_flow.pages.page_music.id
   }
 }
 
