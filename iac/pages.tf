@@ -1,3 +1,15 @@
+import {
+  #   import the start page of the catalog flow
+  id = "${google_dialogflow_cx_agent.agent.catalog_flow}/pages/START_PAGE"
+  to = google_dialogflow_cx_page.catalog_flow_start.id
+}
+
+# make modifications to the start page of the catalog flow
+resource "google_dialogflow_cx_page" "catalog_flow_start" {
+  parent       = google_dialogflow_cx_flow.catalog_flow.id
+  display_name = "Start Page"
+}
+
 resource "google_dialogflow_cx_page" "page_artist_overview" {
   parent       = google_dialogflow_cx_flow.catalog_flow.id
   display_name = "Artist Overview"

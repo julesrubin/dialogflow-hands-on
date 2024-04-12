@@ -128,11 +128,6 @@ resource "google_dialogflow_cx_flow" "catalog_flow" {
       }
     }
   }
-
-  transition_routes {
-    intent      = google_dialogflow_cx_intent.redirect_artists_overview.id
-    target_page = google_dialogflow_cx_page.page_artist_overview.id
-  }
 }
 
 resource "google_dialogflow_cx_flow" "customer_care" {
